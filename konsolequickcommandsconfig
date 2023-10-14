@@ -24,27 +24,27 @@ name=99. Check Everything is Installed
 tooltip=Check Installations
 
 [Port Scanning][0. Long form general enumeration]
-command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && nnmap -vv -Pn -A -sC -sS -T 4 -p- $target
+command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && clear && nnmap -vv -Pn -A -sC -sS -T 4 -p- $target
 name=0. Long form general enumeration
 tooltip=Long form general enumeration
 
 [Port Scanning][1. Verbose, syn, all ports, all scripts, no ping]
-command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && nmap -v -sS -A -T4 $target
+command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && clear && nmap -v -sS -A -T4 $target
 name=1. Verbose, syn, all ports, all scripts, no ping
 tooltip=Nmap Verbose, Syn, All Ports
 
 [Port Scanning][2. Identify ports on target]
-command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && targetports=$(rustscan -g -a $target | cut -f 2 -d '[' | cut -f 1 -d ']')\necho $targetports
+command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && clear && targetports=$(rustscan -g -a $target | cut -f 2 -d '[' | cut -f 1 -d ']')\necho $targetports
 name=2. Rustscan short form
 tooltip=Rustscan
 
 [Port Scanning][3. Quick Port Scan]
-command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && nmap -F $target
+command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && clear && nmap -F $target
 name=3. Quick Port Scan
 tooltip=Quick Nmap scan
 
 [Subdomain Scanning][1. Wfuzz Brute subdomains]
-command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && wfuzz -v -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt -Z -H "Host: FUZZ.$target" http://$target
+command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && clear && wfuzz -v -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt -Z -H "Host: FUZZ.$target" http://$target
 name=1. Wfuzz Brute subdomains
 tooltip=Wfuzz Brute subdomains
 
@@ -54,37 +54,37 @@ name=2. Webarchive Subdomains
 tooltip=Retrieve Subdomains from web archive.
 
 [CMS scanning][0. Identify your targets software]
-command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && httpx -u $target -title -tech-detect -status-code -cl -ct -location -rt -lc -wc -server -method -ip -cname -cdn -probe  -silent
+command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && clear && httpx -u $target -title -tech-detect -status-code -cl -ct -location -rt -lc -wc -server -method -ip -cname -cdn -probe  -silent
 name=0. Httpx
 tooltip=httpx checking
 
 [CMS scanning][1. Whatweb]
-command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && whatweb $target
+command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && clear && whatweb $target
 name=1. Whatweb
 tooltip=Whatweb
 
 [CMS scanning][2. Wafw00f]
-command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && wafw00f $target
+command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && clear && wafw00f $target
 name=2. Wafw00f
 tooltip=Wafw00f
 
 [CMS scanning]3. Wordpress]
-command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && wpscan --url http://$target --enumerate u,vp,vt --follow-redirect
+command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && clear && wpscan --url http://$target --enumerate u,vp,vt --follow-redirect
 name=2. Wordpress/Wpscan
 tooltip=Wordpress/Wpscan
 
 [Directory scanning][0. Dirsearch simple]
-command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && dirsearch -u $target -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -q -x 404 --exit-on-error -t 20 --exclude-subdirs=js,css
+command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && clear && dirsearch -u $target -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -q -x 404 --exit-on-error -t 20 --exclude-subdirs=js,css
 name=0. Quick Directory Scan
 tooltip=dirsearch quick
 
 [Directory scanning][1. Dirsearch complex]
-command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && dirsearch -u $target -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -f -e php,tar.gz,config,conf,zip,rar,txt,sh,py -H "X-Custom-IP-Authorization: 127.0.0.1"
+command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && clear && dirsearch -u $target -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -f -e php,tar.gz,config,conf,zip,rar,txt,sh,py -H "X-Custom-IP-Authorization: 127.0.0.1"
 name=1. Dirsearch complex
 tooltip=dirsearch complex
 
 [Directory scanning][2. Gobuster]
-command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && gobuster dir --wordlist /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -u http://$target -x php,txt,html,sh,cgi
+command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && clear && gobuster dir --wordlist /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -u http://$target -x php,txt,html,sh,cgi
 name=2. Gobuster
 tooltip=Gobuster directory scanning
 
@@ -94,16 +94,16 @@ name=0. Hydra To be fixed later
 tooltip=Hydra Commands
 
 [FTP/SMB][0. FTP download]
-command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && wget -m ftp://anonymous:anonymous@$target
+command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && clear && wget -m ftp://anonymous:anonymous@$target
 name=0. FTP anonymous download
 tooltip=Anonymous login and retrieve all files
 
 [Penetration Testing][1. SMB enumeration (Enum4Linux)]
-command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && enum4linux -a $target
+command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && clear && enum4linux -a $target
 name=1. SMB enumeration (Enum4Linux)
 tooltip=SMB enumeration with enum4linux
 
 [DNS INFO][0. (Dig) DNS information]
-command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && dig $target
+command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && clear && dig $target
 name=1. Dig DNS information
 tooltip=Dig the DNS info
