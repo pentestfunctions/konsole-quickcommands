@@ -107,3 +107,43 @@ tooltip=SMB enumeration with enum4linux
 command=#shellcheck disable=SC1125,SC2154,SC1072,SC2086\n[ -z "$target" ] && target=$(zenity --entry --text "What is your target?" --title "Set Target Variable") && echo "You have chosen: $target"; [ -n "$target" ] && clear && dig $target
 name=1. Dig DNS information
 tooltip=Dig the DNS info
+
+[Decoding][Base64 Decode]
+command=#shellcheck disable=SC2162\nhash=$(zenity --entry --text "Enter your base64-encoded data:" --title "Base64 Decode")\necho "You have entered: $hash"\ndecoded_data=$(echo "$hash" | base64 --decode)\necho "Decoded data: $decoded_data"
+name=Base64 Decode
+tooltip=Decode a base64-encoded data
+
+[Decoding][Base32 Decode]
+command=#shellcheck disable=SC2162\nencoded_data=$(zenity --entry --text "Enter your base32-encoded data:" --title "Base32 Decode")\necho "You have entered: $encoded_data"\ndecoded_data=$(echo "$encoded_data" | base32 --decode)\necho "Decoded data: $decoded_data"
+name=Base32 Decode
+tooltip=Decode a base32-encoded data
+
+[Decoding][Base58 Decode]
+command=#shellcheck disable=SC2162\nencoded_data=$(zenity --entry --text "Enter your base58-encoded data:" --title "Base58 Decode")\necho "You have entered: $encoded_data"\ndecoded_data=$(echo "$encoded_data" | base58 --decode)\necho "Decoded data: $decoded_data"
+name=Base58 Decode
+tooltip=Decode a base58-encoded data
+
+[Decoding][Base85 Decode]
+command=#shellcheck disable=SC2162\nencoded_data=$(zenity --entry --text "Enter your base85 (Ascii85)-encoded data:" --title "Base85 Decode")\necho "You have entered: $encoded_data"\ndecoded_data=$(echo "$encoded_data" | base85 --decode)\necho "Decoded data: $decoded_data"
+name=Base85 Decode
+tooltip=Decode a base85 (Ascii85)-encoded data
+
+[Decoding][URL Decode]
+command=#shellcheck disable=SC2162\nencoded_url=$(zenity --entry --text "Enter the URL-encoded string:" --title "URL Decode")\necho "You have entered: $encoded_url"\ndecoded_url=$(echo "$encoded_url" | urldecode)\necho "Decoded URL: $decoded_url"
+name=URL Decode
+tooltip=Decode a URL-encoded string
+
+[Decoding][Hex Decode]
+command=#shellcheck disable=SC2162\nhex_string=$(zenity --entry --text "Enter your hex-encoded string:" --title "Hex Decode")\necho "You have entered: $hex_string"\ndecoded_string=$(echo "$hex_string" | xxd -r -p)\necho "Decoded string: $decoded_string"
+name=Hex Decode
+tooltip=Decode a hex-encoded string
+
+[Decoding][ROT13 Decode]
+command=#shellcheck disable=SC2162\nrot13_string=$(zenity --entry --text "Enter your ROT13-encoded string:" --title "ROT13 Decode")\necho "You have entered: $rot13_string"\ndecoded_string=$(echo "$rot13_string" | tr 'A-Za-z' 'N-ZA-Mn-za-m')\necho "Decoded string: $decoded_string"
+name=ROT13 Decode
+tooltip=Decode a ROT13-encoded string
+
+[Decoding][AES Decrypt]
+command=#shellcheck disable=SC2162\nencrypted_data=$(zenity --entry --text "Enter your AES-encrypted data in base64:" --title "AES Decrypt")\npassword=$(zenity --password --text "Enter decryption password:")\necho "You have entered encrypted data: $encrypted_data"\ndecrypted_data=$(echo "$encrypted_data" | base64 --decode | openssl aes-256-cbc -d -a -pass pass:$password)\necho "Decrypted data: $decrypted_data"
+name=AES Decrypt
+tooltip=Decrypt AES-encrypted data (AES-256-CBC)
