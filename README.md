@@ -10,5 +10,5 @@
 
 ## Basically allows for quick command execution using konsole (Bash)
 
-![Example](working.gif)
+![Example](GISMuZg.mp4)
 
