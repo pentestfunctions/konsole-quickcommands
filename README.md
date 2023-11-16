@@ -11,4 +11,6 @@
 ## Basically allows for quick command execution using konsole (Bash)
 
 ![Example](GISMuZg.mp4)
+[![Watch the video](link-to-a-thumbnail-image-if-available)](GISMuZg.mp4)
+
 
