@@ -34,11 +34,8 @@ This project allows for quick command execution using konsole (Bash).
 
 ## Commands
 
-
-### Default Commands
-
 <details>
-<summary>Click to Expand/Collapse</summary>
+<summary>Default Commands</summary>
 
 | Command | Description | Implemented |
 |:--------|:------------|:-----------:|
@@ -50,10 +47,8 @@ This project allows for quick command execution using konsole (Bash).
 
 </details>
 
-### Port Scanning
-
 <details>
-<summary>Click to Expand/Collapse</summary>
+<summary>Port Scanning</summary>
 
 | Command | Description | Implemented |
 |:--------|:------------|:-----------:|
@@ -64,10 +59,8 @@ This project allows for quick command execution using konsole (Bash).
 
 </details>
 
-### Subdomain Scanning
-
 <details>
-<summary>Click to Expand/Collapse</summary>
+<summary>Subdomain Scanning</summary>
 
 | Command | Description | Implemented |
 |:--------|:------------|:-----------:|
@@ -76,10 +69,8 @@ This project allows for quick command execution using konsole (Bash).
 
 </details>
 
-### CMS Scanning
-
 <details>
-<summary>Click to Expand/Collapse</summary>
+<summary>CMS Scanning</summary>
 
 | Command | Description | Implemented |
 |:--------|:------------|:-----------:|
@@ -90,10 +81,8 @@ This project allows for quick command execution using konsole (Bash).
 
 </details>
 
-### Directory Scanning
-
 <details>
-<summary>Click to Expand/Collapse</summary>
+<summary>Directory Scanning</summary>
 
 | Command | Description | Implemented |
 |:--------|:------------|:-----------:|
@@ -103,10 +92,8 @@ This project allows for quick command execution using konsole (Bash).
 
 </details>
 
-### Bruteforce and FTP/SMB
-
 <details>
-<summary>Click to Expand/Collapse</summary>
+<summary>Bruteforce and FTP/SMB</summary>
 
 | Command | Description | Implemented |
 |:--------|:------------|:-----------:|
@@ -116,10 +103,9 @@ This project allows for quick command execution using konsole (Bash).
 
 </details>
 
-### DNS and Decoding
 
 <details>
-<summary>Click to Expand/Collapse</summary>
+<summary>DNS and Decoding</summary>
 
 | Command | Description | Implemented |
 |:--------|:------------|:-----------:|
