@@ -1,5 +1,8 @@
-
 # konsole-quickcommands 🚀
+
+<p align="center">
+  <img src="konsole_commands.png" alt="Penetration Testing Assistant Bot Mascot">
+</p>
 
 ![GitHub top language](https://img.shields.io/github/languages/top/pentestfunctions/konsole-quickcommands)
 ![GitHub issues](https://img.shields.io/github/issues/pentestfunctions/konsole-quickcommands)
