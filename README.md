@@ -17,7 +17,7 @@
 
 ### From another terminal you can do the following:
 ```bash
-sudo apt-get install konsole
+sudo apt-get install konsole shellcheck
 curl https://raw.githubusercontent.com/pentestfunctions/konsole-quickcommands/main/konsolequickcommandsconfig > ~/.config/konsolequickcommandsconfig
 ```
 Then simply launch your konsole terminal. 
