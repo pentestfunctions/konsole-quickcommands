@@ -15,6 +15,13 @@
 4. Move this file to `~/.config/konsolequickcommandsconfig`
 5. Profit. 💸
 
+### From another terminal you can do the following:
+```bash
+sudo apt-get install konsole
+curl https://raw.githubusercontent.com/pentestfunctions/konsole-quickcommands/main/konsolequickcommandsconfig > ~/.config/konsolequickcommandsconfig
+```
+Then simply launch your konsole terminal. 
+
 🔨 **Status:** Still work in progress.
 
 ## Overview
