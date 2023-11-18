@@ -33,18 +33,7 @@ This project allows for quick command execution using konsole (Bash).
   - `command`: [Complex command]
   - `tooltip`: Set the target for scanning
 
-... [Rest of the commands]
-
-### Port Scanning
-... [Commands for port scanning]
-
-### Subdomain Scanning
-... [Commands for subdomain scanning]
-
-### CMS Scanning
-... [Commands for CMS scanning]
-
-... [Rest of the categories]
+#### And many more...!
 
 ## Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -59,5 +48,4 @@ Contributions are what make the open-source community such an amazing place to l
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
-Your Name - [@your_twitter](https://twitter.com/your_username)
 Project Link: [https://github.com/pentestfunctions/konsole-quickcommands](https://github.com/pentestfunctions/konsole-quickcommands)
