@@ -9,7 +9,7 @@ name=1. Set Target Variable
 tooltip=Set the target for scanning
 
 [00Default Commands00][2. Host penetration testing directory]
-command=#shellcheck disable=SC2162\ncd /usr/share/hosting\npython3 -m http.server 80
+command=#shellcheck disable=SC2162\ncd /usr/share/hosting || \nsudo python3 -m http.server 80
 name=2. Host penetration testing directory
 tooltip=Host penetration testing directory
 
